@@ -18,9 +18,15 @@ $$
   y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 $$
 
-Where:  
-- \( h_0 \): initial height  
-- \( g \): acceleration due to gravity (\(pprox 9.81\, 	ext{m/s}^2\))
+Where:
+
+$$
+  h_0 = \text{initial height}
+$$
+
+$$
+  g = \text{acceleration due to gravity} \ (\approx 9.81 \, \text{m/s}^2)
+$$
 
 Solving the vertical motion for $$y(t) = 0$$ gives the time of flight:
 
