@@ -45,5 +45,3 @@ If \( h_0 = 0 \):
 ### Family of Solutions
 
 Different initial conditions (\( v_0, h_0, g \)) generate a family of parabolic trajectories.
-
----
