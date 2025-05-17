@@ -1,28 +1,23 @@
 # Investigating the Range as a Function of the Angle of Projection
 
-$$ $$
-
 ## 1. Theoretical Foundation
 
 ### Equations of Motion
-Projectile motion can be derived from Newton's second law:
+
+The projectile's position as a function of time:
 
 $$
-\begin{cases}
-x(t) = v_0 \cos\theta \cdot t \\ 
-y(t) = v_0 \sin\theta \cdot t - \frac{1}{2}gt^2 
-\end{cases}
+x(t) = v_0 \cos(\theta) \cdot t
 $$
 
-$$ $$
+$$
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+$$
 
 ### Key Quantities
-1. **Time of Flight**:
-$$
-T = \frac{2v_0 \sin\theta}{g}
-$$
 
-2. **Maximum Height**:
+**Time of Flight**:
+
 $$
-H = \frac{v_0^2 \sin^2\theta}{2g}
+T = \frac{2 v_0 \sin(\theta)}{g}
 $$
