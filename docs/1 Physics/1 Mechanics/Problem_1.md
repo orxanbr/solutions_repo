@@ -21,3 +21,15 @@ $$
 $$
 T = \frac{2 v_0 \sin(\theta)}{g}
 $$
+
+**Maximum Height**:
+
+$$
+H = \frac{v_0^2 \sin^2(\theta)}{2g}
+$$
+
+**Range**:
+
+$$
+R = \frac{v_0^2 \sin(2\theta)}{g}
+$$
