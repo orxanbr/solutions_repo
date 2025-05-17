@@ -58,26 +58,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2. Analysis of the Range</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#effect-of-angle">Effect of Angle</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#effect-of-initial-velocity-v_0">Effect of Initial Velocity (\( v_0 \))</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#effect-of-gravity-g">Effect of Gravity (\( g \))</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#effect-of-launch-height-h_0">Effect of Launch Height (\( h_0 \))</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#3-practical-applications">3. Practical Applications</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#real-world-use-cases">Real-World Use Cases</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#model-adaptations">Model Adaptations</a>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -214,78 +194,24 @@
   y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 \]</div>
 <p>Where:
-   $$ <span class="arithmatex">\( h_0 \)</span>: initial height
-   $$( g ): acceleration due to gravity (~9.81 m/s²)</p>
-<p>Solving the vertical motion for <span class="arithmatex">\( y(t) = 0 \)</span> gives the time of flight:
-[
+- <span class="arithmatex">\( h_0 \)</span>: initial height<br/>
+- <span class="arithmatex">\( g \)</span>: acceleration due to gravity (~9.81 m/s²)</p>
+<p>Solving the vertical motion for <span class="arithmatex">\( y(t) = 0 \)</span> gives the time of flight:</p>
+<div class="arithmatex">\[
   t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0}}{g}
-]</p>
+\]</div>
 <h3 id="horizontal-range">Horizontal Range</h3>
-<p>Using <span class="arithmatex">\( x(t) = v_0 \cos(\theta) \cdot t \)</span>, the range becomes:
-[
+<p>Using <span class="arithmatex">\( x(t) = v_0 \cos(\theta) \cdot t \)</span>, the range becomes:</p>
+<div class="arithmatex">\[
   R = \frac{v_0 \cos(\theta)}{g} \left( v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0} \right)
-]</p>
-<p>If <span class="arithmatex">\( h_0 = 0 \)</span>:
-[
+\]</div>
+<p>If <span class="arithmatex">\( h_0 = 0 \)</span>:</p>
+<div class="arithmatex">\[
   R = \frac{v_0^2 \sin(2\theta)}{g}
-]</p>
+\]</div>
 <h3 id="family-of-solutions">Family of Solutions</h3>
 <p>Different initial conditions (<span class="arithmatex">\( v_0, h_0, g \)</span>) generate a family of parabolic trajectories.</p>
 <hr/>
-<h2 id="2-analysis-of-the-range">2. Analysis of the Range</h2>
-<h3 id="effect-of-angle">Effect of Angle</h3>
-<ul>
-<li>Maximum range at <span class="arithmatex">\( 45^\circ \)</span> when <span class="arithmatex">\( h_0 = 0 \)</span></li>
-<li><span class="arithmatex">\( R(\theta) = R(90^\circ - \theta) \)</span> — symmetry in angle</li>
-</ul>
-<h3 id="effect-of-initial-velocity-v_0">Effect of Initial Velocity (<span class="arithmatex">\( v_0 \)</span>)</h3>
-<ul>
-<li>Range increases with <span class="arithmatex">\( v_0^2 \)</span></li>
-</ul>
-<h3 id="effect-of-gravity-g">Effect of Gravity (<span class="arithmatex">\( g \)</span>)</h3>
-<ul>
-<li>Range decreases with increasing <span class="arithmatex">\( g \)</span></li>
-</ul>
-<h3 id="effect-of-launch-height-h_0">Effect of Launch Height (<span class="arithmatex">\( h_0 \)</span>)</h3>
-<ul>
-<li>Increases time of flight and thus range</li>
-<li>Peak range shifts to angles less than <span class="arithmatex">\( 45^\circ \)</span></li>
-</ul>
-<hr/>
-<h2 id="3-practical-applications">3. Practical Applications</h2>
-<h3 id="real-world-use-cases">Real-World Use Cases</h3>
-<table>
-<thead>
-<tr>
-<th>Domain</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Sports</td>
-<td>Kicking, shooting, throwing in sports</td>
-</tr>
-<tr>
-<td>Engineering</td>
-<td>Launching packages, projectile systems</td>
-</tr>
-<tr>
-<td>Ballistics</td>
-<td>Bullet/missile trajectory calculations</td>
-</tr>
-<tr>
-<td>Space Science</td>
-<td>Rocket launches, satellite placement</td>
-</tr>
-</tbody>
-</table>
-<h3 id="model-adaptations">Model Adaptations</h3>
-<ul>
-<li><strong>Air Resistance:</strong> Introduce drag force <span class="arithmatex">\( F_{\text{drag}} = -kv \text{ or } -kv^2 \)</span></li>
-<li><strong>Wind:</strong> Add horizontal acceleration component</li>
-<li><strong>Uneven Terrain:</strong> Adjust final vertical condition <span class="arithmatex">\( y(t) = H \)</span></li>
-</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
