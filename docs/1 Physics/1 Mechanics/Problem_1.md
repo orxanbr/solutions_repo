@@ -47,3 +47,4 @@ If $$h_0 = 0$$:
 $$
   R = \frac{v_0^2 \sin(2\theta)}{g}
 $$
+f
