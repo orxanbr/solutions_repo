@@ -3,7 +3,7 @@
 ## 1. Theoretical Foundation
 
 ### Equations of Motion
-Projectile motion can be derived from Newton's second law of motion. For a projectile launched with initial velocity \( v_0 \) at angle \( \theta \) from the horizontal:
+Projectile motion can be derived from Newton's second law of motion. For a projectile launched with initial velocity ( v_0 ) at angle \( \theta \) from the horizontal:
 
 \[
 \begin{cases}
