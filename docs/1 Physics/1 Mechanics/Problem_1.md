@@ -74,4 +74,3 @@ Different initial conditions (\( v_0, h_0, g \)) generate a family of parabolic 
 - **Wind:** Add horizontal acceleration component
 - **Uneven Terrain:** Adjust final vertical condition \( y(t) = H \)
 
----
