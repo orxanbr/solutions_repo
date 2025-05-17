@@ -54,8 +54,6 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#horizontal-range">Horizontal Range</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#family-of-solutions">Family of Solutions</a>
-</li>
 </ul>
 </li>
 </ul>
@@ -184,7 +182,7 @@
 <h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
 <h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
 <h3 id="governing-equations-of-motion">Governing Equations of Motion</h3>
-<p>A projectile launched with an initial velocity <span class="arithmatex">\( v_0 \)</span> at an angle <span class="arithmatex">\( \theta \)</span> from horizontal can be described using two motion components:</p>
+<p>A projectile launched with an initial velocity <span class="arithmatex">\(<span class="arithmatex">\(v_0\)</span>\)</span> at an angle <span class="arithmatex">\(<span class="arithmatex">\(\theta\)</span>\)</span> from horizontal can be described using two motion components:</p>
 <h4 id="horizontal-motion-constant-velocity">Horizontal motion (constant velocity):</h4>
 <div class="arithmatex">\[
   x(t) = v_0 \cos(\theta) \cdot t
@@ -193,26 +191,22 @@
 <div class="arithmatex">\[
   y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 \]</div>
-<p>Where:
-$$
-( h_0 ): initial height<br/>
-$$
-( g ): acceleration due to gravity (~9.81 m/s²)</p>
-<p>Solving the vertical motion for <span class="arithmatex">\( y(t) = 0 \)</span> gives the time of flight:</p>
+<p>Where:<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(h_0\)</span>\)</span>: initial height<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(g\)</span>\)</span>: acceleration due to gravity (~9.81 m/s²)</p>
+<p>Solving the vertical motion for <span class="arithmatex">\(<span class="arithmatex">\(y(t) = 0\)</span>\)</span> gives the time of flight:</p>
 <div class="arithmatex">\[
   t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0}}{g}
 \]</div>
 <h3 id="horizontal-range">Horizontal Range</h3>
-<p>Using <span class="arithmatex">\( x(t) = v_0 \cos(\theta) \cdot t \)</span>, the range becomes:</p>
+<p>Using <span class="arithmatex">\(<span class="arithmatex">\(x(t) = v_0 \cos(\theta) \cdot t\)</span>\)</span>, the range becomes:</p>
 <div class="arithmatex">\[
   R = \frac{v_0 \cos(\theta)}{g} \left( v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0} \right)
 \]</div>
-<p>If <span class="arithmatex">\( h_0 = 0 \)</span>:</p>
+<p>If <span class="arithmatex">\(<span class="arithmatex">\(h_0 = 0\)</span>\)</span>:</p>
 <div class="arithmatex">\[
   R = \frac{v_0^2 \sin(2\theta)}{g}
 \]</div>
-<h3 id="family-of-solutions">Family of Solutions</h3>
-<p>Different initial conditions (<span class="arithmatex">\( v_0, h_0, g \)</span>) generate a family of parabolic trajectories.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
