@@ -54,6 +54,20 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#horizontal-range">Horizontal Range</a>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#family-of-solutions">Family of Solutions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-analysis-of-the-range">2. Analysis of the Range</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#effect-of-angle">Effect of Angle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#effect-of-initial-velocity-v_0">Effect of Initial Velocity (\(\(v_0\)\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#effect-of-gravity-g">Effect of Gravity (\(\(g\)\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#effect-of-launch-height-h_0">Effect of Launch Height (\(\(h_0\)\))</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -191,13 +205,9 @@
 <div class="arithmatex">\[
   y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 \]</div>
-<p>Where:</p>
-<div class="arithmatex">\[
-h_0 =   ext{initial height}
-\]</div>
-<div class="arithmatex">\[
-g =     ext{acceleration due to gravity } (pprox 9.81 \,   ext{m/s}^2)
-\]</div>
+<p>Where:<br/>
+- <span class="arithmatex">\( h_0 \)</span>: initial height<br/>
+- <span class="arithmatex">\( g \)</span>: acceleration due to gravity (<span class="arithmatex">\(pprox 9.81\,     ext{m/s}^2\)</span>)</p>
 <p>Solving the vertical motion for <span class="arithmatex">\(<span class="arithmatex">\(y(t) = 0\)</span>\)</span> gives the time of flight:</p>
 <div class="arithmatex">\[
   t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0}}{g}
@@ -208,10 +218,32 @@ g =     ext{acceleration due to gravity } (pprox 9.81 \,   ext{m/s}^2)
   R = \frac{v_0 \cos(\theta)}{g} \left( v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0} \right)
 \]</div>
 <p>If <span class="arithmatex">\(<span class="arithmatex">\(h_0 = 0\)</span>\)</span>:</p>
-<p>$$
+<div class="arithmatex">\[
   R = \frac{v_0^2 \sin(2\theta)}{g}
-$$
-f</p>
+\]</div>
+<h3 id="family-of-solutions">Family of Solutions</h3>
+<p>Different initial conditions (<span class="arithmatex">\(<span class="arithmatex">\(v_0, h_0, g\)</span>\)</span>) generate a family of parabolic trajectories.</p>
+<hr/>
+<h2 id="2-analysis-of-the-range">2. Analysis of the Range</h2>
+<h3 id="effect-of-angle">Effect of Angle</h3>
+<ul>
+<li>Maximum range at <span class="arithmatex">\(<span class="arithmatex">\(45^\circ\)</span>\)</span> when <span class="arithmatex">\(<span class="arithmatex">\(h_0 = 0\)</span>\)</span> </li>
+<li><span class="arithmatex">\(<span class="arithmatex">\(R(\theta) = R(90^\circ - \theta)\)</span>\)</span> — symmetry in angle</li>
+</ul>
+<h3 id="effect-of-initial-velocity-v_0">Effect of Initial Velocity (<span class="arithmatex">\(<span class="arithmatex">\(v_0\)</span>\)</span>)</h3>
+<ul>
+<li>Range increases with <span class="arithmatex">\(<span class="arithmatex">\(v_0^2\)</span>\)</span></li>
+</ul>
+<h3 id="effect-of-gravity-g">Effect of Gravity (<span class="arithmatex">\(<span class="arithmatex">\(g\)</span>\)</span>)</h3>
+<ul>
+<li>Range decreases with increasing <span class="arithmatex">\(<span class="arithmatex">\(g\)</span>\)</span></li>
+</ul>
+<h3 id="effect-of-launch-height-h_0">Effect of Launch Height (<span class="arithmatex">\(<span class="arithmatex">\(h_0\)</span>\)</span>)</h3>
+<ul>
+<li>Increases time of flight and thus range  </li>
+<li>Peak range shifts to angles less than <span class="arithmatex">\(<span class="arithmatex">\(45^\circ\)</span>\)</span></li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
