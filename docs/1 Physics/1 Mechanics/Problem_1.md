@@ -47,26 +47,3 @@ $$
 Different initial conditions ($$v_0, h_0, g$$) generate a family of parabolic trajectories.
 
 ---
-
-## 2. Analysis of the Range
-
-### Effect of Angle
-
-- Maximum range at $$45^\circ$$ when $$h_0 = 0$$  
-- $$R(\theta) = R(90^\circ - \theta)$$ — symmetry in angle
-
-### Effect of Initial Velocity ($$v_0$$)
-
-- Range increases with $$v_0^2$$
-
-### Effect of Gravity ($$g$$)
-
-- Range decreases with increasing $$g$$
-
-### Effect of Launch Height ($$h_0$$)
-
-- Increases time of flight and thus range  
-- Peak range shifts to angles less than $$45^\circ$$
-
----
-
