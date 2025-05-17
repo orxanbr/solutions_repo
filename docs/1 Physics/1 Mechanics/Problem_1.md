@@ -19,8 +19,8 @@ A projectile launched with an initial velocity \( v_0 \) at an angle \( \theta \
 \]
 
 Where:
-- \( h_0 \): initial height  
-- \( g \): acceleration due to gravity (~9.81 m/s²)
+  - \( h_0 \): initial height  
+  - \( g \): acceleration due to gravity (~9.81 m/s²)
 
 Solving the vertical motion for \( y(t) = 0 \) gives the time of flight:
 
