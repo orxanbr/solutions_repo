@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Projectile Motion: Range vs. Launch Angle Analysis - Physics and Mathematics</title>
+<title>Problem 1 - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Projectile Motion: Range vs. Launch Angle Analysis";
+        var mkdocs_page_name = "Problem 1";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,16 +46,8 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Projectile Motion: Range vs. Launch Angle Analysis</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#governing-equations">Governing Equations</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#family-of-solutions">Family of Solutions</a>
-</li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -171,7 +163,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Projectile Motion: Range vs. Launch Angle Analysis</li>
+<li class="breadcrumb-item active">Problem 1</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -179,25 +171,28 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="projectile-motion-range-vs-launch-angle-analysis">Projectile Motion: Range vs. Launch Angle Analysis</h1>
-<h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
-<h3 id="governing-equations">Governing Equations</h3>
-<p>From Newton's laws, we derive the projectile motion equations:</p>
-<p><strong>Differential Form:</strong>
-$$
-\frac{d^2x}{dt^2} = 0, \quad \frac{d^2y}{dt^2} = -g
-$$</p>
-<p><strong>Solutions:</strong>
-$$
-x(t) = v_0\cos\theta\cdot t
-$$
-$$
-y(t) = v_0\sin\theta\cdot t - \frac{1}{2}gt^2
-$$</p>
-<h3 id="family-of-solutions">Family of Solutions</h3>
-<p>For fixed <span class="arithmatex">\( g \)</span>, solutions form a two-parameter family based on:
-- Initial velocity <span class="arithmatex">\( v_0 \)</span>
-- Launch angle <span class="arithmatex">\( \theta \)</span></p>
+<ol>
+<li>Theoretical Foundation</li>
+</ol>
+<p>We consider a projectile launched with an initial velocity <span class="arithmatex">\(<span class="arithmatex">\(v_0\)</span>\)</span> at an angle <span class="arithmatex">\(<span class="arithmatex">\(\theta\)</span>\)</span> to the horizontal. Neglecting air resistance and assuming constant gravitational acceleration <span class="arithmatex">\(<span class="arithmatex">\(g\)</span>\)</span>, we derive the equations of motion.</p>
+<h3 id="equations-of-motion">Equations of Motion</h3>
+<p>The horizontal and vertical positions as a function of time <span class="arithmatex">\(<span class="arithmatex">\(t\)</span>\)</span> are:</p>
+<div class="arithmatex">\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]</div>
+<div class="arithmatex">\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<h3 id="time-of-flight">Time of Flight</h3>
+<p>The time when the projectile hits the ground <span class="arithmatex">\(<span class="arithmatex">\(y(t) = 0\)</span>\)</span> is:</p>
+<div class="arithmatex">\[
+t_{flight} = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<h3 id="range-equation">Range Equation</h3>
+<p>Substituting <span class="arithmatex">\(<span class="arithmatex">\(t_{flight}\)</span>\)</span> into <span class="arithmatex">\(<span class="arithmatex">\(x(t)\)</span>\)</span>, we get the horizontal range <span class="arithmatex">\(<span class="arithmatex">\(R\)</span>\)</span>:</p>
+<div class="arithmatex">\[
+R(\theta) = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
