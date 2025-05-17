@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Projectile Motion Analysis: Range vs. Launch Angle - Physics and Mathematics</title>
+<title>Projectile Motion: Range vs. Launch Angle Analysis - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Projectile Motion Analysis: Range vs. Launch Angle";
+        var mkdocs_page_name = "Projectile Motion: Range vs. Launch Angle Analysis";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,13 +46,13 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Projectile Motion Analysis: Range vs. Launch Angle</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Projectile Motion: Range vs. Launch Angle Analysis</a>
 <ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="#1-theoretical-foundation">1. Theoretical Foundation</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#derivation-of-equations">Derivation of Equations</a>
+<li class="toctree-l4"><a class="reference internal" href="#governing-equations">Governing Equations</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#key-quantities-derived">Key Quantities Derived</a>
+<li class="toctree-l4"><a class="reference internal" href="#family-of-solutions">Family of Solutions</a>
 </li>
 </ul>
 </li>
@@ -171,7 +171,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Projectile Motion Analysis: Range vs. Launch Angle</li>
+<li class="breadcrumb-item active">Projectile Motion: Range vs. Launch Angle Analysis</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -179,40 +179,25 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="projectile-motion-analysis-range-vs-launch-angle">Projectile Motion Analysis: Range vs. Launch Angle</h1>
+<h1 id="projectile-motion-range-vs-launch-angle-analysis">Projectile Motion: Range vs. Launch Angle Analysis</h1>
 <h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
-<h3 id="derivation-of-equations">Derivation of Equations</h3>
-<p>We begin with Newton's second law of motion. For a projectile launched with initial velocity <span class="arithmatex">\( v_0 \)</span> at angle <span class="arithmatex">\( \theta \)</span>, we separate the motion into horizontal (x) and vertical (y) components:</p>
-<p><strong>Horizontal Motion:</strong>
+<h3 id="governing-equations">Governing Equations</h3>
+<p>From Newton's laws, we derive the projectile motion equations:</p>
+<p><strong>Differential Form:</strong>
 $$
-\frac{d^2x}{dt^2} = 0 \implies x(t) = v_0\cos(\theta)\cdot t
+\frac{d^2x}{dt^2} = 0, \quad \frac{d^2y}{dt^2} = -g
 $$</p>
-<p><strong>Vertical Motion:</strong>
+<p><strong>Solutions:</strong>
 $$
-\frac{d^2y}{dt^2} = -g \implies y(t) = v_0\sin(\theta)\cdot t - \frac{1}{2}gt^2
+x(t) = v_0\cos\theta\cdot t
+$$
+$$
+y(t) = v_0\sin\theta\cdot t - \frac{1}{2}gt^2
 $$</p>
-<h3 id="key-quantities-derived">Key Quantities Derived</h3>
-<ol>
-<li>
-<p><strong>Time of Flight (T):</strong> Solved by setting y(t) = 0
-   $$
-   T = \frac{2v_0\sin(\theta)}{g}
-   $$</p>
-</li>
-<li>
-<p><strong>Maximum Height (H):</strong> Found when vertical velocity = 0
-   $$
-   H = \frac{v_0^2\sin^2(\theta)}{2g}
-   $$</p>
-</li>
-<li>
-<p><strong>Range (R):</strong> Horizontal distance when projectile lands
-   $$
-   R = \frac{v_0^2\sin(2\theta)}{g}
-   $$</p>
-</li>
-</ol>
-<p><em>This shows the range depends on three key parameters: initial velocity, launch angle, and gravity.</em></p>
+<h3 id="family-of-solutions">Family of Solutions</h3>
+<p>For fixed <span class="arithmatex">\( g \)</span>, solutions form a two-parameter family based on:
+- Initial velocity <span class="arithmatex">\( v_0 \)</span>
+- Launch angle <span class="arithmatex">\( \theta \)</span></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
