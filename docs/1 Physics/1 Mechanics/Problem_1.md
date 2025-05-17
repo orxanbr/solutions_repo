@@ -1,3 +1,9 @@
+# Investigating the Range as a Function of the Angle of Projection
+
+$$ $$
+
+## 1. Theoretical Foundation
+
 ### Equations of Motion
 Projectile motion can be derived from Newton's second law:
 
@@ -14,4 +20,9 @@ $$ $$
 1. **Time of Flight**:
 $$
 T = \frac{2v_0 \sin\theta}{g}
+$$
+
+2. **Maximum Height**:
+$$
+H = \frac{v_0^2 \sin^2\theta}{2g}
 $$
