@@ -1,10 +1,11 @@
-1. Theoretical Foundation
+ Theoretical Foundation
 
-We consider a projectile launched with an initial velocity $$v_0$$ at an angle $$\theta$$ to the horizontal. Neglecting air resistance and assuming constant gravitational acceleration $$g$$, we derive the equations of motion.
+We consider a projectile launched with an initial velocity $v_0$ at an angle $\theta$ to the horizontal.  
+Neglecting air resistance and assuming constant gravitational acceleration $g$, we derive the equations of motion.
 
 ### Equations of Motion
 
-The horizontal and vertical positions as a function of time $$t$$ are:
+The horizontal and vertical positions as a function of time $t$ are:
 
 $$
 x(t) = v_0 \cos(\theta) \cdot t
@@ -16,16 +17,18 @@ $$
 
 ### Time of Flight
 
-The time when the projectile hits the ground $$y(t) = 0$$ is:
+The time when the projectile hits the ground ($y(t) = 0$) is:
 
 $$
-t_{flight} = \frac{2 v_0 \sin(\theta)}{g}
+t_{\text{flight}} = \frac{2 v_0 \sin(\theta)}{g}
 $$
 
 ### Range Equation
 
-Substituting $$t_{flight}$$ into $$x(t)$$, we get the horizontal range $$R$$:
+Substituting $t_{\text{flight}}$ into $x(t)$, we get the horizontal range $R$:
 
 $$
 R(\theta) = \frac{v_0^2 \sin(2\theta)}{g}
 $$
+
+---
