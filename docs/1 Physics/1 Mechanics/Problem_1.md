@@ -73,6 +73,18 @@ $$
 $$
 R = \frac{v_0^2 \sin(2\theta)}{g}
 $$
+## 🔄 Family of Solutions
+
+A *"family of solutions"* refers to how **initial conditions** affect the trajectory:
+
+| **Parameter** | **Effect on Trajectory** |
+|---------------|---------------------------|
+| \( v_0 \)     | Increases both range and height |
+| \( \theta \)  | Changes range & height; max range at 45° (if \( h_0 = 0 \)) |
+| \( h_0 \)     | Increases total time of flight and hence range |
+| \( g \)       | Stronger gravity reduces range and hang time |
+
+So varying any of these creates a **new curve**, but all follow the same general mathematical form — that’s your *family of solutions*.
 
 ---
 
