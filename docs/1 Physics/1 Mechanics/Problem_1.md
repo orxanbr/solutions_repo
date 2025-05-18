@@ -98,4 +98,5 @@ So varying any of these creates a **new curve**, but all follow the same general
 - Higher launch height $h_0$ extends the range.
 
 ---
-
+## Visualizing the Range
+![alt text](image.png)
