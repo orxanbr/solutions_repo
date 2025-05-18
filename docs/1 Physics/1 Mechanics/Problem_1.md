@@ -30,49 +30,6 @@ $$
 - Affected by gravitational acceleration $g$  
 - Follows a parabolic trajectory  
 
----
-
-These are solutions to the second-order differential equation:
-
-$$
-\frac{d^2 y}{dt^2} = -g
-$$
-
----
-
-### 🔄 Integrating Once
-
-$$
-\frac{dy}{dt} = -gt + C_1
-$$
-
-With the initial vertical velocity:
-
-$$
-v_y(0) = v_0 \sin(\theta) \Rightarrow C_1 = v_0 \sin(\theta)
-$$
-
----
-
-### 🔄 Integrating Again
-
-$$
-y(t) = -\frac{1}{2}gt^2 + v_0 \sin(\theta) \cdot t + C_2
-$$
-
-Using the initial height $y(0) = h_0$:
-
-$$
-C_2 = h_0
-$$
-
-Thus:
-
-$$
-y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
-$$
-
----
 
 ## 📌 Step 2: Time of Flight
 
