@@ -54,10 +54,6 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#b-vertical-motion-with-gravity">b. Vertical Motion (with gravity)</a>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#integrating-once">🔄 Integrating Once</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#integrating-again">🔄 Integrating Again</a>
-</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#step-2-time-of-flight">📌 Step 2: Time of Flight</a>
@@ -217,34 +213,6 @@ y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 <li>Affected by gravitational acceleration <span class="arithmatex">\(g\)</span> </li>
 <li>Follows a parabolic trajectory  </li>
 </ul>
-<hr/>
-<p>These are solutions to the second-order differential equation:</p>
-<div class="arithmatex">\[
-\frac{d^2 y}{dt^2} = -g
-\]</div>
-<hr/>
-<h3 id="integrating-once">🔄 Integrating Once</h3>
-<div class="arithmatex">\[
-\frac{dy}{dt} = -gt + C_1
-\]</div>
-<p>With the initial vertical velocity:</p>
-<div class="arithmatex">\[
-v_y(0) = v_0 \sin(\theta) \Rightarrow C_1 = v_0 \sin(\theta)
-\]</div>
-<hr/>
-<h3 id="integrating-again">🔄 Integrating Again</h3>
-<div class="arithmatex">\[
-y(t) = -\frac{1}{2}gt^2 + v_0 \sin(\theta) \cdot t + C_2
-\]</div>
-<p>Using the initial height <span class="arithmatex">\(y(0) = h_0\)</span>:</p>
-<div class="arithmatex">\[
-C_2 = h_0
-\]</div>
-<p>Thus:</p>
-<div class="arithmatex">\[
-y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
-\]</div>
-<hr/>
 <h2 id="step-2-time-of-flight">📌 Step 2: Time of Flight</h2>
 <p>To find the time when the projectile hits the ground, set <span class="arithmatex">\(y(t) = 0\)</span>:</p>
 <div class="arithmatex">\[
