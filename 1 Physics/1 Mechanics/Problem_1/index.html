@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>🎯 Investigating the Range as a Function of the Angle of Projection - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83c\udfaf Investigating the Range as a Function of the Angle of Projection";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,8 +46,30 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🎯 Investigating the Range as a Function of the Angle of Projection</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#step-1-deriving-the-equations">📌 Step 1: Deriving the Equations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-horizontal-motion-no-acceleration">a. Horizontal Motion (no acceleration)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#b-vertical-motion-with-gravity">b. Vertical Motion (with gravity)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#integrating-once">🔄 Integrating Once</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#integrating-again">🔄 Integrating Again</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-time-of-flight">📌 Step 2: Time of Flight</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-calculating-range">📌 Step 3: Calculating Range</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-analysis-of-the-range">📌 Step 4: Analysis of the Range</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#key-observations">🔍 Key Observations</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -163,7 +185,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">🎯 Investigating the Range as a Function of the Angle of Projection</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,27 +193,97 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<p>Theoretical Foundation</p>
-<p>We consider a projectile launched with an initial velocity <span class="arithmatex">\(v_0\)</span> at an angle <span class="arithmatex">\(\theta\)</span> to the horizontal.<br/>
-Neglecting air resistance and assuming constant gravitational acceleration <span class="arithmatex">\(g\)</span>, we derive the equations of motion.</p>
-<h3 id="equations-of-motion">Equations of Motion</h3>
-<p>The horizontal and vertical positions as a function of time <span class="arithmatex">\(t\)</span> are:</p>
+<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">🎯 Investigating the Range as a Function of the Angle of Projection</h1>
+<hr/>
+<h2 id="step-1-deriving-the-equations">📌 Step 1: Deriving the Equations</h2>
+<p>Assume a projectile is launched from height <span class="arithmatex">\(h_0\)</span> with initial velocity <span class="arithmatex">\(v_0\)</span> at angle <span class="arithmatex">\(\theta\)</span> from the horizontal.<br/>
+We break motion into <strong>horizontal (x)</strong> and <strong>vertical (y)</strong> components.</p>
+<hr/>
+<h3 id="a-horizontal-motion-no-acceleration">a. Horizontal Motion (no acceleration)</h3>
 <div class="arithmatex">\[
 x(t) = v_0 \cos(\theta) \cdot t
 \]</div>
+<ul>
+<li>Constant horizontal velocity  </li>
+<li>No air resistance  </li>
+<li>Uniform linear motion</li>
+</ul>
+<hr/>
+<h3 id="b-vertical-motion-with-gravity">b. Vertical Motion (with gravity)</h3>
 <div class="arithmatex">\[
-y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 \]</div>
-<h3 id="time-of-flight">Time of Flight</h3>
-<p>The time when the projectile hits the ground (<span class="arithmatex">\(y(t) = 0\)</span>) is:</p>
+<ul>
+<li>Affected by gravitational acceleration <span class="arithmatex">\(g\)</span> </li>
+<li>Follows a parabolic trajectory  </li>
+</ul>
+<hr/>
+<p>These are solutions to the second-order differential equation:</p>
 <div class="arithmatex">\[
-t_{\text{flight}} = \frac{2 v_0 \sin(\theta)}{g}
+\frac{d^2 y}{dt^2} = -g
 \]</div>
-<h3 id="range-equation">Range Equation</h3>
-<p>Substituting <span class="arithmatex">\(t_{\text{flight}}\)</span> into <span class="arithmatex">\(x(t)\)</span>, we get the horizontal range <span class="arithmatex">\(R\)</span>:</p>
+<hr/>
+<h3 id="integrating-once">🔄 Integrating Once</h3>
 <div class="arithmatex">\[
-R(\theta) = \frac{v_0^2 \sin(2\theta)}{g}
+\frac{dy}{dt} = -gt + C_1
 \]</div>
+<p>With the initial vertical velocity:</p>
+<div class="arithmatex">\[
+v_y(0) = v_0 \sin(\theta) \Rightarrow C_1 = v_0 \sin(\theta)
+\]</div>
+<hr/>
+<h3 id="integrating-again">🔄 Integrating Again</h3>
+<div class="arithmatex">\[
+y(t) = -\frac{1}{2}gt^2 + v_0 \sin(\theta) \cdot t + C_2
+\]</div>
+<p>Using the initial height <span class="arithmatex">\(y(0) = h_0\)</span>:</p>
+<div class="arithmatex">\[
+C_2 = h_0
+\]</div>
+<p>Thus:</p>
+<div class="arithmatex">\[
+y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
+\]</div>
+<hr/>
+<h2 id="step-2-time-of-flight">📌 Step 2: Time of Flight</h2>
+<p>To find the time when the projectile hits the ground, set <span class="arithmatex">\(y(t) = 0\)</span>:</p>
+<div class="arithmatex">\[
+0 = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2}gt^2
+\]</div>
+<p>This is a quadratic equation in <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{2}gt^2 - v_0 \sin(\theta) \cdot t - h_0 = 0
+\]</div>
+<p>Solving with the quadratic formula:</p>
+<div class="arithmatex">\[
+t = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0}}{g}
+\]</div>
+<p>(We discard the negative root because time must be positive.)</p>
+<hr/>
+<h2 id="step-3-calculating-range">📌 Step 3: Calculating Range</h2>
+<p>Using the horizontal motion:</p>
+<div class="arithmatex">\[
+R = x(t_{\text{flight}}) = v_0 \cos(\theta) \cdot t_{\text{flight}}
+\]</div>
+<p>Substitute the time of flight:</p>
+<div class="arithmatex">\[
+R(\theta) = v_0 \cos(\theta) \cdot \left( \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2gh_0}}{g} \right)
+\]</div>
+<blockquote>
+<p>Special case: When <span class="arithmatex">\(h_0 = 0\)</span>, the formula simplifies to:</p>
+</blockquote>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<hr/>
+<h2 id="step-4-analysis-of-the-range">📌 Step 4: Analysis of the Range</h2>
+<h3 id="key-observations">🔍 Key Observations</h3>
+<ul>
+<li>The range is <strong>maximum</strong> at <span class="arithmatex">\(\theta = 45^\circ\)</span> when <span class="arithmatex">\(h_0 = 0\)</span>.</li>
+<li>The function is <strong>symmetric</strong> around <span class="arithmatex">\(45^\circ\)</span>.</li>
+<li>Range increases <strong>quadratically</strong> with <span class="arithmatex">\(v_0\)</span>.</li>
+<li>Higher launch height <span class="arithmatex">\(h_0\)</span> extends the range.</li>
+</ul>
 <hr/>
 </div>
 </div><footer>
