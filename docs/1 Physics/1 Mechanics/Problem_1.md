@@ -13,14 +13,6 @@ We break motion into **horizontal (x)** and **vertical (y)** components.
 
 $$
 x(t) = v_0 \cos(\theta) \cdot t
-$$
-form a **family of parametric solutions** where each set of initial conditions:
-
-- \( v_0 \): Initial velocity  
-- \( \theta \): Angle of projection  
-- \( h_0 \): Initial height  
-- \( g \): Gravitational acceleration
----
 
 ### b. Vertical Motion (with gravity)
 
@@ -28,9 +20,13 @@ $$
 y(t) = h_0 + v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
 $$
 
-- Affected by gravitational acceleration $g$  
-- Follows a parabolic trajectory  
+$$
+form a **family of parametric solutions** where each set of initial conditions:
 
+- \( v_0 \): Initial velocity  
+- \( \theta \): Angle of projection  
+- \( h_0 \): Initial height  
+- \( g \): Gravitational acceleration
 
 ## 📌 Step 2: Time of Flight
 
