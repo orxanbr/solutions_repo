@@ -177,8 +177,19 @@
 <div class="section" itemprop="articleBody">
 <h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
 <p>Start with the nonlinear differential equation describing the forced damped pendulum:</p>
-<div class="arithmatex">\[
+<p>$$
 \frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+$$
+Where:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\theta &amp; : \text{Angular displacement} \\
+b &amp; : \text{Damping coefficient} \\
+g &amp; : \text{Acceleration due to gravity} \\
+L &amp; : \text{Length of the pendulum} \\
+A &amp; : \text{Amplitude of the driving force} \\
+\omega &amp; : \text{Angular frequency of the driving force}
+\end{aligned}
 \]</div>
 <h4 id="small-angle-approximation">Small-Angle Approximation</h4>
 <p>For small oscillations, approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>. The equation becomes linear:</p>
@@ -218,6 +229,16 @@
 <li><strong>Driven RLC circuits</strong> in electronics</li>
 <li><strong>Biomechanical systems</strong> like human gait</li>
 </ul>
+<h2 id="implementation">Implementation</h2>
+<p>We create a computational model to simulate the motion of a forced damped pendulum and visualize:</p>
+<ul>
+<li>Time evolution</li>
+<li>Phase diagram</li>
+<li>Poincaré section</li>
+</ul>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p><img alt="alt text" src="../image-3.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
