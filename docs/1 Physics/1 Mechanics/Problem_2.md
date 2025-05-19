@@ -59,9 +59,11 @@ At this point, the system exhibits **maximum amplitude** (resonant response), es
 
  For some values of $( A )$and $( \omega )$, the system shifts from:
 
-*Periodic motion
-*Quasiperiodic motion
-*Chaotic motion
+**Periodic motion**
+
+**Quasiperiodic motion**
+
+**Chaotic motion**
 
 This transition is visualized using phase space plots and Poincaré sections.
 
