@@ -55,21 +55,15 @@ At this point, the system exhibits **maximum amplitude** (resonant response), es
   - **Driving frequency** $( \omega )$:Determines synchronization, resonance, or chaos
   
   
-Regular to Chaotic Transition
+ Regular to Chaotic Transition
 
-For some values of $( A )$and $( \omega )$, the system shifts from:
+ For some values of $( A )$and $( \omega )$, the system shifts from:
 
-Periodic motion
-
-Quasiperiodic motion
-
-Chaotic motion
+*Periodic motion
+*Quasiperiodic motion
+*Chaotic motion
 
 This transition is visualized using phase space plots and Poincaré sections.
-
-- Examine the **transition from regular to chaotic motion**
-
----
 
 ### 3. Practical Applications
 
