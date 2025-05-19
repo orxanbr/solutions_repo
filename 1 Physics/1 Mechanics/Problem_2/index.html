@@ -50,6 +50,10 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#small-angle-approximation">Small-Angle Approximation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#resonance-conditions">Resonance Conditions</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -171,7 +175,49 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
+<p>Start with the nonlinear differential equation describing the forced damped pendulum:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin\theta = A \cos(\omega t)
+\]</div>
+<h4 id="small-angle-approximation">Small-Angle Approximation</h4>
+<p>For small oscillations, approximate <span class="arithmatex">\( \sin\theta \approx \theta \)</span>. The equation becomes linear:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \theta = A \cos(\omega t)
+\]</div>
+<p>This is a second-order <strong>linear</strong> nonhomogeneous differential equation with periodic forcing.</p>
+<h4 id="resonance-conditions">Resonance Conditions</h4>
+<p>The natural frequency of the pendulum (undamped, unforced) is:</p>
+<div class="arithmatex">\[
+\omega_0 = \sqrt{\frac{g}{L}}
+\]</div>
+<p>Resonance occurs when the driving frequency <span class="arithmatex">\( \omega \)</span> approaches the natural frequency:</p>
+<div class="arithmatex">\[
+\omega \approx \omega_0
+\]</div>
+<p>At this point, the system exhibits <strong>maximum amplitude</strong> (resonant response), especially when damping is low.</p>
+<hr/>
+<h3 id="2-analysis-of-dynamics">2. Analysis of Dynamics</h3>
+<ul>
+<li>Analyze how varying parameters affects behavior:</li>
+<li><strong>Damping coefficient</strong> <span class="arithmatex">\( b \)</span></li>
+<li><strong>Driving amplitude</strong> <span class="arithmatex">\( A \)</span></li>
+<li>
+<p><strong>Driving frequency</strong> <span class="arithmatex">\( \omega \)</span></p>
+</li>
+<li>
+<p>Examine the <strong>transition from regular to chaotic motion</strong></p>
+</li>
+</ul>
+<hr/>
+<h3 id="3-practical-applications">3. Practical Applications</h3>
+<p>Discuss real-world systems that model a forced damped pendulum:</p>
+<ul>
+<li><strong>Energy harvesting</strong> devices</li>
+<li><strong>Suspension bridges</strong> under wind or vibration</li>
+<li><strong>Driven RLC circuits</strong> in electronics</li>
+<li><strong>Biomechanical systems</strong> like human gait</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
