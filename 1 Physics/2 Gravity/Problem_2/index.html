@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>🚀 Escape Velocities and Cosmic Velocities - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "\ud83d\ude80 Escape Velocities and Cosmic Velocities";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -56,8 +56,50 @@
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🚀 Escape Velocities and Cosmic Velocities</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">📌 Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#definitions-and-physical-meaning">🌌 Definitions and Physical Meaning</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#first-cosmic-velocity-v_1">First Cosmic Velocity (\(\(v_1\)\))</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#second-cosmic-velocity">Second Cosmic Velocity</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#third-cosmic-velocity">Third Cosmic Velocity</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mathematical-derivation">🧮 Mathematical Derivation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#derivation-of-escape-velocity-2nd-cosmic-velocity">Derivation of Escape Velocity (2nd Cosmic Velocity):</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#calculated-cosmic-velocities-for-earth-mars-and-jupiter">🌍 Calculated Cosmic Velocities for Earth, Mars, and Jupiter</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters-used">Parameters Used:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#results">Results:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#visual-representation">📊 Visual Representation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#applications-in-space-exploration">🚀 Applications in Space Exploration</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-considerations">📍 Real-World Considerations</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#further-exploration">🔎 Further Exploration</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#python-simulation-code">🔢 Python Simulation Code</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">✋ Conclusion</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
@@ -163,7 +205,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">🚀 Escape Velocities and Cosmic Velocities</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +213,229 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h1 id="escape-velocities-and-cosmic-velocities">🚀 Escape Velocities and Cosmic Velocities</h1>
+<h2 id="motivation">📌 Motivation</h2>
+<p>Understanding the concept of <strong>escape velocity</strong> and the broader framework of <strong>cosmic velocities</strong> is essential for grasping how spacecraft travel within and beyond planetary systems. These velocities define the speed thresholds for different levels of orbital and escape maneuvers:</p>
+<ul>
+<li>Achieving orbit (1st Cosmic Velocity)  </li>
+<li>Escaping a planet's gravitational pull (2nd Cosmic Velocity)  </li>
+<li>Escaping a star system (3rd Cosmic Velocity)</li>
+</ul>
+<p>These are key to:
+- Launching and maintaining satellites<br/>
+- Planning interplanetary missions<br/>
+- Designing spacecraft capable of interstellar travel  </p>
+<hr/>
+<h2 id="definitions-and-physical-meaning">🌌 Definitions and Physical Meaning</h2>
+<h3 id="first-cosmic-velocity-v_1"><strong>First Cosmic Velocity</strong> (<span class="arithmatex">\(<span class="arithmatex">\(v_1\)</span>\)</span>)</h3>
+<p>This is the <strong>minimum horizontal velocity</strong> an object must have to maintain a <strong>stable circular orbit</strong> just above the surface of a celestial body, assuming no atmospheric resistance.</p>
+<div class="arithmatex">\[
+v_1 = \sqrt{\frac{GM}{R}}
+\]</div>
+<p>Where:<br/>
+- <span class="arithmatex">\(G\)</span> is the gravitational constant<br/>
+  $$
+  G = 6.67430 \times 10^{-11} \ \text{m}^3 \ \text{kg}^{-1} \ \text{s}^{-2}
+  $$<br/>
+- <span class="arithmatex">\(M\)</span> is the mass of the celestial body<br/>
+- <span class="arithmatex">\(R\)</span> is the radius from the center of mass (typically the planet's radius)  </p>
+<h3 id="second-cosmic-velocity"><strong>Second Cosmic Velocity</strong></h3>
+<p>Also known as <strong>escape velocity</strong>, this is the speed needed to <strong>break free from the gravitational influence</strong> of a planet or moon without further propulsion.</p>
+<div class="arithmatex">\[
+v_2 = \sqrt{\frac{2GM}{R}} = \sqrt{2} \cdot v_1
+\]</div>
+<h3 id="third-cosmic-velocity"><strong>Third Cosmic Velocity</strong></h3>
+<p>This is the speed required to escape <strong>not just a planet, but the entire star system</strong>. A probe must overcome the gravitational well of both the planet and the star.</p>
+<p>A simplified estimate (assuming the object already escaped the planet and is in a solar orbit):</p>
+<div class="arithmatex">\[
+v_3 \approx \sqrt{2} \cdot v_2 = 2 \cdot v_1
+\]</div>
+<hr/>
+<h2 id="mathematical-derivation">🧮 Mathematical Derivation</h2>
+<h3 id="derivation-of-escape-velocity-2nd-cosmic-velocity">Derivation of Escape Velocity (2nd Cosmic Velocity):</h3>
+<p>From energy conservation:</p>
+<ul>
+<li>Initial total energy:<br/>
+  $$
+  E_i = \frac{1}{2}mv^2 - \frac{GMm}{R}
+  $$</li>
+<li>Final total energy at infinity:<br/>
+  $$
+  E_f = 0
+  $$</li>
+</ul>
+<p>Setting <span class="arithmatex">\(<span class="arithmatex">\(E_i = E_f\)</span>\)</span>:</p>
+<div class="arithmatex">\[
+\frac{1}{2}mv^2 = \frac{GMm}{R} \Rightarrow v = \sqrt{\frac{2GM}{R}}
+\]</div>
+<p>This equation underpins both <span class="arithmatex">\(<span class="arithmatex">\(v_2\)</span>\)</span> and, indirectly, <span class="arithmatex">\(<span class="arithmatex">\(v_3\)</span>\)</span>.</p>
+<hr/>
+<h2 id="calculated-cosmic-velocities-for-earth-mars-and-jupiter">🌍 Calculated Cosmic Velocities for Earth, Mars, and Jupiter</h2>
+<h3 id="parameters-used">Parameters Used:</h3>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Mass (kg)</th>
+<th>Radius (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>5.972 × 10²⁴</td>
+<td>6.371 × 10⁶</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>6.39 × 10²³</td>
+<td>3.3895 × 10⁶</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>1.898 × 10²⁷</td>
+<td>6.9911 × 10⁷</td>
+</tr>
+</tbody>
+</table>
+<h3 id="results">Results:</h3>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th><span class="arithmatex">\(<span class="arithmatex">\(v_1\)</span>\)</span> (km/s)</th>
+<th><span class="arithmatex">\(<span class="arithmatex">\(v_2\)</span>\)</span> (km/s)</th>
+<th><span class="arithmatex">\(<span class="arithmatex">\(v_3\)</span>\)</span> (km/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Earth</td>
+<td>7.91</td>
+<td>11.19</td>
+<td>15.82</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>3.55</td>
+<td>5.02</td>
+<td>7.09</td>
+</tr>
+<tr>
+<td>Jupiter</td>
+<td>42.57</td>
+<td>60.20</td>
+<td>85.14</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="visual-representation">📊 Visual Representation</h2>
+<blockquote>
+<p>Add this image manually or run the code below to generate a bar chart for:
+- 1st Cosmic Velocity: Orbital Insertion<br/>
+- 2nd Cosmic Velocity: Planetary Escape<br/>
+- 3rd Cosmic Velocity: Interstellar Escape  </p>
+</blockquote>
+<hr/>
+<h2 id="applications-in-space-exploration">🚀 Applications in Space Exploration</h2>
+<table>
+<thead>
+<tr>
+<th>Mission Objective</th>
+<th>Required Velocity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Satellite Deployment (LEO, MEO, GEO)</td>
+<td>1st Cosmic</td>
+</tr>
+<tr>
+<td>Interplanetary Probes</td>
+<td>2nd Cosmic</td>
+</tr>
+<tr>
+<td>Interstellar Probes</td>
+<td>3rd Cosmic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><strong>1st Cosmic</strong>: Starlink orbits via Falcon 9  </li>
+<li><strong>2nd Cosmic</strong>: Mars Rover missions  </li>
+<li><strong>3rd Cosmic</strong>: Voyager 1 and 2 leaving solar system  </li>
+</ul>
+<hr/>
+<h2 id="real-world-considerations">📍 Real-World Considerations</h2>
+<ul>
+<li><strong>Atmospheric Drag</strong>: Neglected in ideal model  </li>
+<li><strong>Launch Profiles</strong>: Real missions use staged rockets  </li>
+<li><strong>Gravitational Assists</strong>: Reduce <span class="arithmatex">\(<span class="arithmatex">\(\Delta v\)</span>\)</span> for <span class="arithmatex">\(<span class="arithmatex">\(v_3\)</span>\)</span> </li>
+<li><strong>Oberth Effect</strong>: Velocity burns more effective deeper in gravity well  </li>
+</ul>
+<hr/>
+<h2 id="further-exploration">🔎 Further Exploration</h2>
+<ul>
+<li>Explore slingshot maneuvers  </li>
+<li>Add Moon, Titan, Europa to table  </li>
+<li>Simulate velocity vs altitude  </li>
+<li>Model delta-v requirements for entire mission stacks  </li>
+</ul>
+<hr/>
+<h2 id="python-simulation-code">🔢 Python Simulation Code</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
+
+# Planetary data
+bodies = {
+    "Earth":   {"mass": 5.972e24,  "radius": 6.371e6},
+    "Mars":    {"mass": 6.39e23,   "radius": 3.3895e6},
+    "Jupiter": {"mass": 1.898e27,  "radius": 6.9911e7}
+}
+
+# Velocity calculation
+def calculate_cosmic_velocities(m, r):
+    v1 = np.sqrt(G * m / r)
+    v2 = np.sqrt(2) * v1
+    v3 = np.sqrt(2) * v2
+    return v1, v2, v3
+
+results = {}
+for name, props in bodies.items():
+    v1, v2, v3 = calculate_cosmic_velocities(props["mass"], props["radius"])
+    results[name] = [v1/1000, v2/1000, v3/1000]  # Convert to km/s
+
+# Plotting
+labels = list(results.keys())
+v1_vals = [results[k][0] for k in labels]
+v2_vals = [results[k][1] for k in labels]
+v3_vals = [results[k][2] for k in labels]
+
+x = np.arange(len(labels))
+width = 0.25
+
+plt.figure(figsize=(10,6))
+plt.bar(x - width, v1_vals, width, label='1st Cosmic Velocity')
+plt.bar(x,         v2_vals, width, label='2nd Cosmic Velocity')
+plt.bar(x + width, v3_vals, width, label='3rd Cosmic Velocity')
+
+plt.xticks(x, labels)
+plt.ylabel('Velocity (km/s)')
+plt.title('Cosmic Velocities for Celestial Bodies')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<hr/>
+<h2 id="conclusion">✋ Conclusion</h2>
+<p>The cosmic velocity framework provides a conceptual and mathematical foundation for space exploration. Whether launching a satellite, sending a rover to Mars, or dreaming of reaching another star, these velocity thresholds set the minimum physical limits that technology must overcome.</p>
+<p>Understanding them deepens our appreciation of the challenges and brilliance behind modern rocketry and spacecraft engineering.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
