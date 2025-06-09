@@ -122,6 +122,13 @@ simulate_interference_pattern(n_sources=5, title="Regular Pentagon")
 
 ---
 
+![alt text](image.png)
+
+
+
+
+![alt text](image-2.png)
+
 ## 🎯 Key Observations
 
 - More sources $\Rightarrow$ more intricate interference.
