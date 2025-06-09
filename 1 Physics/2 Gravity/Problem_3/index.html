@@ -66,7 +66,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal">3 Waves</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../3%20Waves/Problem_1/">🌊 Interference Patterns on a Water Surface</a>
 </li>
 </ul>
 </li>
@@ -172,11 +172,166 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-3">Problem 3</h1>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth">🚀 Trajectories of a Freely Released Payload Near Earth</h1>
+<h2 id="motivation">📌 Motivation</h2>
+<p>When an object is released from a moving rocket near Earth, its trajectory is governed by initial velocity, release angle, altitude, and the gravitational pull of Earth. This creates a spectrum of possible paths — <strong>elliptical</strong>, <strong>parabolic</strong>, or <strong>hyperbolic</strong> — depending on its <strong>energy and direction</strong>.</p>
+<p>Understanding these trajectories is crucial for:</p>
+<ul>
+<li><strong>Orbital insertion</strong> </li>
+<li><strong>Satellite deployment</strong> </li>
+<li><strong>Reentry planning</strong> </li>
+<li><strong>Escape missions</strong> </li>
+</ul>
+<hr/>
+<h2 id="theoretical-background">🌍 Theoretical Background</h2>
+<h3 id="newtons-law-of-gravitation">🧲 Newton’s Law of Gravitation</h3>
+<div class="arithmatex">\[
+F = \frac{GMm}{r^2}
+\]</div>
+<p>Where:<br/>
+- <span class="arithmatex">\( F \)</span> is the gravitational force<br/>
+- <span class="arithmatex">\( G = 6.67430 \times 10^{-11} \ \text{m}^3/\text{kg}/\text{s}^2 \)</span><br/>
+- <span class="arithmatex">\( M \)</span> is Earth’s mass<br/>
+- <span class="arithmatex">\( m \)</span> is the payload mass<br/>
+- <span class="arithmatex">\( r \)</span> is the distance from Earth's center</p>
+<hr/>
+<h3 id="equation-of-motion-2d">🔄 Equation of Motion (2D)</h3>
+<p>To simulate motion in a plane, we use Newton's Second Law and integrate position and velocity:</p>
+<div class="arithmatex">\[
+\vec{a} = - \frac{GM}{r^3} \vec{r}
+\]</div>
+<p>We use numerical methods like <strong>Euler</strong> or <strong>Runge-Kutta (RK4)</strong> to simulate the motion over time.</p>
+<hr/>
+<h2 id="types-of-trajectories">✨ Types of Trajectories</h2>
+<ul>
+<li><strong>Elliptical</strong>: Bound orbit (total mechanical energy &lt; 0)</li>
+<li><strong>Parabolic</strong>: Escape at exactly escape velocity (total energy = 0)</li>
+<li><strong>Hyperbolic</strong>: Escape with excess velocity (total energy &gt; 0)</li>
+</ul>
+<p>The total specific energy:</p>
+<div class="arithmatex">\[
+\epsilon = \frac{v^2}{2} - \frac{GM}{r}
+\]</div>
+<hr/>
+<h2 id="python-simulation-code">🧪 Python Simulation Code</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11
+M = 5.972e24
+R = 6.371e6  # Earth's radius in meters
+
+# Initial conditions
+altitude = 300e3  # 300 km above surface
+r0 = np.array([R + altitude, 0])  # position vector
+v0 = np.array([0, 7700])          # velocity vector (tangent speed near orbit)
+
+# Time settings
+dt = 1  # time step (s)
+total_time = 10000  # seconds
+steps = int(total_time / dt)
+
+# Arrays to store trajectory
+positions = []
+velocities = []
+
+r = r0.copy()
+v = v0.copy()
+
+for _ in range(steps):
+    # Record position
+    positions.append(r.copy())
+
+    # Calculate acceleration
+    distance = np.linalg.norm(r)
+    acc = -G * M * r / distance**3
+
+    # Update velocity and position (Euler method)
+    v += acc * dt
+    r += v * dt
+
+    # Stop if impact
+    if np.linalg.norm(r) &lt;= R:
+        break
+
+positions = np.array(positions)
+
+# Plot trajectory
+plt.figure(figsize=(8, 8))
+plt.plot(positions[:,0]/1000, positions[:,1]/1000, label="Payload Trajectory")
+earth = plt.Circle((0, 0), R/1000, color='blue', alpha=0.5, label="Earth")
+plt.gca().add_patch(earth)
+plt.xlabel("X (km)")
+plt.ylabel("Y (km)")
+plt.title("Trajectory of a Freely Released Payload Near Earth")
+plt.axis("equal")
+plt.grid(True)
+plt.legend()
+plt.show()
+</code></pre>
+<hr/>
+<h2 id="example-scenarios">🔍 Example Scenarios</h2>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Initial Speed (m/s)</th>
+<th>Resulting Trajectory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Below Orbital Speed (~7.5 km/s)</td>
+<td>6000</td>
+<td>Sub-orbital / Reentry</td>
+</tr>
+<tr>
+<td>Circular Orbit</td>
+<td>7670</td>
+<td>Elliptical Orbit</td>
+</tr>
+<tr>
+<td>Escape Velocity (~11.2 km/s)</td>
+<td>11200</td>
+<td>Parabolic Escape</td>
+</tr>
+<tr>
+<td>Excess Velocity</td>
+<td>12000</td>
+<td>Hyperbolic Escape</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="visual-interpretation">📊 Visual Interpretation</h2>
+<ul>
+<li>If the velocity is <strong>too low</strong>, the payload returns to Earth.</li>
+<li>If it's <strong>just right</strong>, it stays in orbit.</li>
+<li>If <strong>too high</strong>, it escapes Earth’s gravity.</li>
+</ul>
+<hr/>
+<h2 id="applications">🛰️ Applications</h2>
+<ul>
+<li><strong>Satellite deployment</strong>: Achieving elliptical or circular orbit</li>
+<li><strong>Space missions</strong>: Transfer orbits to Moon, Mars, etc.</li>
+<li><strong>Reentry planning</strong>: Ensuring objects return predictably</li>
+<li><strong>Planetary science</strong>: Studying how objects behave near planetary bodies</li>
+</ul>
+<hr/>
+<p><img alt="alt text" src="../image-2.png"/> </p>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<h2 id="conclusion">✅ Conclusion</h2>
+<p>Simulating payload trajectories near Earth highlights the beauty and complexity of <strong>celestial mechanics</strong>. Even slight changes in initial speed or angle drastically affect the path — making simulation tools and understanding physics absolutely vital for modern space missions.</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
 <a class="btn btn-neutral float-left" href="../Problem_2/" title="Escape Velocities and Cosmic Velocities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="🌊 Interference Patterns on a Water Surface">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
