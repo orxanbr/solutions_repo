@@ -172,6 +172,106 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="exploring-the-central-limit-theorem-through-simulations">📊 Exploring the Central Limit Theorem through Simulations</h1>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a foundational concept in statistics. It states:</p>
+<blockquote>
+<p>Given a sufficiently large sample size <span class="arithmatex">\(n\)</span>, the sampling distribution of the sample mean will approximate a <strong>normal distribution</strong> — even if the underlying population distribution is not normal.</p>
+</blockquote>
+<p>This is essential in:
+- Parameter estimation<br/>
+- Quality control<br/>
+- Predictive modeling<br/>
+- Statistical inference  </p>
+<hr/>
+<h2 id="simulation-setup">🔢 Simulation Setup</h2>
+<p>We simulate CLT using three different population distributions:</p>
+<ol>
+<li><strong>Uniform(0, 1)</strong> — Flat distribution  </li>
+<li><strong>Exponential(λ = 1)</strong> — Skewed distribution  </li>
+<li><strong>Binomial(n = 10, p = 0.5)</strong> — Discrete distribution  </li>
+</ol>
+<p>For each population:
+- Generate <span class="arithmatex">\(100,\!000\)</span> values<br/>
+- Draw <span class="arithmatex">\(1,\!000\)</span> random samples for each <span class="arithmatex">\(n \in \{5, 10, 30, 50\}\)</span><br/>
+- Compute the <strong>sample mean</strong><br/>
+- Plot the distribution of those means  </p>
+<hr/>
+<h2 id="python-code-snippet">🧪 Python Code Snippet</h2>
+<pre><code class="language-python">def simulate_sampling_distribution(population_func, pop_args, sample_sizes, n_samples=1000, pop_size=100000):
+    population = population_func(*pop_args, size=pop_size)
+    results = {}
+    for n in sample_sizes:
+        sample_means = [
+            np.mean(np.random.choice(population, size=n, replace=True))
+            for _ in range(n_samples)
+        ]
+        results[n] = sample_means
+    return population, results
+</code></pre>
+<hr/>
+<h2 id="results-and-visualization">📈 Results and Visualization</h2>
+<p>For each distribution, observe how the histogram of <strong>sample means</strong> changes as sample size increases.</p>
+<p>✅ Even if the population is <strong>not normal</strong>, the sampling distribution <strong>approaches a normal shape</strong> as <span class="arithmatex">\(n\)</span> increases.</p>
+<hr/>
+<h2 id="parameter-exploration">🔍 Parameter Exploration</h2>
+<ul>
+<li><strong>Sample size (<span class="arithmatex">\(n\)</span>):</strong> </li>
+<li>Small <span class="arithmatex">\(n\)</span>: sample means retain some skew/noise  </li>
+<li>
+<p>Larger <span class="arithmatex">\(n\)</span>: bell-shaped normal distribution emerges  </p>
+</li>
+<li>
+<p><strong>Population shape:</strong> </p>
+</li>
+<li>
+<p>The more skewed the population, the <strong>larger <span class="arithmatex">\(n\)</span> needed</strong> to approximate normality  </p>
+</li>
+<li>
+<p><strong>Variance:</strong> </p>
+</li>
+<li>The spread of the sampling distribution <strong>decreases</strong> as <span class="arithmatex">\(n\)</span> increases  </li>
+<li>Theoretical variance of sample mean:<br/>
+    $$
+    \text{Var}(\bar{X}) = \frac{\sigma^2}{n}
+    $$</li>
+</ul>
+<hr/>
+<h2 id="real-world-applications-of-clt">🌍 Real-World Applications of CLT</h2>
+<ul>
+<li><strong>Estimating population means</strong> from samples (e.g., average income, political polling)  </li>
+<li><strong>Quality control:</strong> sample averages are used to monitor manufacturing processes  </li>
+<li><strong>Finance:</strong> average returns over time modeled as normally distributed  </li>
+<li><strong>Medical studies:</strong> comparing averages in clinical trials, lab testing  </li>
+</ul>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<p><img alt="alt text" src="../image-4.png"/></p>
+<p><img alt="alt text" src="../image-5.png"/></p>
+<p><img alt="alt text" src="../image-6.png"/></p>
+<p><img alt="alt text" src="../image-7.png"/></p>
+<p><img alt="alt text" src="../image-8.png"/></p>
+<p><img alt="alt text" src="../image-9.png"/></p>
+<p><img alt="alt text" src="../image-10.png"/></p>
+<p><img alt="alt text" src="../image-11.png"/></p>
+<p><img alt="alt text" src="../image-12.png"/></p>
+<h2 id="conclusion">✅ Conclusion</h2>
+<p>The CLT shows the <strong>power of averages</strong> — it allows statisticians to make inferences about populations using samples, even when the population distribution is unknown.</p>
+<p>Through simulation, we:
+- Verified convergence of sample means to a normal distribution<br/>
+- Illustrated how sample size affects this convergence<br/>
+- Connected this theory to practical scenarios  </p>
+<hr/>
+<h2 id="deliverables">📌 Deliverables</h2>
+<ul>
+<li>✅ Simulations for Uniform, Exponential, and Binomial populations  </li>
+<li>✅ Histograms for <span class="arithmatex">\(n = 5, 10, 30, 50\)</span> </li>
+<li>✅ Code and derivations  </li>
+<li>✅ Real-world applications explained  </li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
