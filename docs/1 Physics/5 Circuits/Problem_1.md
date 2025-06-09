@@ -136,24 +136,17 @@ R_{\text{eq}} \approx 30\ \Omega
 $$
 
 ---   
-
-
-
-
 ![alt text](image.png)
-
-
-
-
 
 
 
 ![alt text](image-1.png)
 
 
-
-
 ![alt text](image-2.png)
+
+
+
 ## 🚀 Insights & Extensions
 
 - This method works on **any circuit** that can be reduced by series/parallel rules.
