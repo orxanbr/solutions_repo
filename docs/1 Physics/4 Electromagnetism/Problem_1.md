@@ -82,7 +82,7 @@ $$
 
 ---
 
-## 3️⃣ $\vec{E} \times \vec{B}$ Drift
+###3️⃣ $\vec{E} \times \vec{B}$ Drift
 
 ### Conditions
 
