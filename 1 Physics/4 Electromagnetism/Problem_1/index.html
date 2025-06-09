@@ -172,6 +172,154 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="equivalent-resistance-using-graph-theory">⚡ Equivalent Resistance Using Graph Theory</h1>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>Calculating equivalent resistance is a key task in circuit analysis. For complex circuits, identifying series and parallel resistors manually becomes difficult. <strong>Graph theory</strong> allows us to represent circuits as <strong>graphs</strong>—nodes are junctions, and edges are resistors with resistance as weight. This makes the problem algorithmic, automatable, and scalable.</p>
+<hr/>
+<h2 id="core-concepts">🧠 Core Concepts</h2>
+<h3 id="series-resistors">✅ Series Resistors</h3>
+<p>If two resistors are connected <strong>end-to-end</strong>:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = R_1 + R_2
+\]</div>
+<p>This is because the same current flows through both, so voltages add up.</p>
+<hr/>
+<h3 id="parallel-resistors">✅ Parallel Resistors</h3>
+<p>If two resistors are connected to the same pair of nodes:</p>
+<div class="arithmatex">\[
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2}
+\]</div>
+<p>This is because the voltage across them is the same, but the current splits. You get:</p>
+<div class="arithmatex">\[
+I_{\text{total}} = I_1 + I_2 = \frac{V}{R_1} + \frac{V}{R_2}
+\Rightarrow \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2}
+\]</div>
+<hr/>
+<h2 id="pseudocode">🧾 Pseudocode</h2>
+<pre><code>FUNCTION EquivalentResistance(G, start, end):
+    WHILE graph G has more than two nodes:
+        FOR each node v in G:
+            IF v has 2 neighbors u and w:
+                // Series combination
+                R_eq = R_uv + R_vw
+                REMOVE node v
+                ADD edge (u, w) with resistance R_eq
+
+        FOR each pair of nodes u, v with multiple edges:
+            // Parallel combination
+            R_eq = 1 / (1/R1 + 1/R2 + ...)
+            REMOVE all edges (u, v)
+            ADD one edge (u, v) with R_eq
+
+    RETURN resistance between start and end
+</code></pre>
+<hr/>
+<h2 id="python-code-networkx">🐍 Python Code (NetworkX)</h2>
+<pre><code class="language-python">import networkx as nx
+
+def reduce_series(G):
+    modified = True
+    while modified:
+        modified = False
+        for node in list(G.nodes):
+            if G.degree(node) == 2 and node not in ('A', 'E'):  # skip terminals
+                u, v = list(G.neighbors(node))
+                R1 = G[u][node]['resistance']
+                R2 = G[node][v]['resistance']
+                G.add_edge(u, v, resistance=R1 + R2)
+                G.remove_node(node)
+                modified = True
+                break
+
+def reduce_parallel(G):
+    modified = True
+    while modified:
+        modified = False
+        for u, v in list(G.edges):
+            if G.number_of_edges(u, v) &gt; 1:
+                resistances = [G[u][v]['resistance']]
+                R_eq = 1 / sum(1 / R for R in resistances)
+                G.remove_edges_from([(u, v)])
+                G.add_edge(u, v, resistance=R_eq)
+                modified = True
+                break
+
+def equivalent_resistance(G, start, end):
+    G = G.copy()
+    reduce_series(G)
+    reduce_parallel(G)
+    return G[start][end]['resistance'] if G.has_edge(start, end) else None
+</code></pre>
+<hr/>
+<h2 id="circuit-example">🔌 Circuit Example</h2>
+<ul>
+<li>Nodes: A, B, C, D, E  </li>
+<li>Resistors:  </li>
+<li>A–B = 5Ω  </li>
+<li>B–C = 10Ω  </li>
+<li>A–C = 20Ω  </li>
+<li>C–D = 10Ω  </li>
+<li>D–E = 5Ω  </li>
+<li>C–E = 10Ω</li>
+</ul>
+<hr/>
+<h2 id="reduction-process">📉 Reduction Process</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A–B–C</td>
+<td>Series: <span class="arithmatex">\(5 + 10\)</span></td>
+<td>A–C = 15Ω</td>
+</tr>
+<tr>
+<td>A–C (x2)</td>
+<td>Parallel: <span class="arithmatex">\(1/R = 1/15 + 1/20\)</span></td>
+<td>A–C ≈ 8.57Ω</td>
+</tr>
+<tr>
+<td>C–D–E</td>
+<td>Series: <span class="arithmatex">\(10 + 5\)</span></td>
+<td>C–E = 15Ω</td>
+</tr>
+<tr>
+<td>C–E (x2)</td>
+<td>Parallel: <span class="arithmatex">\(1/R = 1/10 + 1/15\)</span></td>
+<td>C–E = 6Ω</td>
+</tr>
+<tr>
+<td>A–C–E</td>
+<td>Final: <span class="arithmatex">\(8.57 + 6\)</span></td>
+<td><strong>≈ 30Ω</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="final-answer">✅ Final Answer</h2>
+<p><strong>Equivalent Resistance between A and E:</strong></p>
+<div class="arithmatex">\[
+R_{\text{eq}} \approx 30\ \Omega
+\]</div>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<h2 id="insights-extensions">🚀 Insights &amp; Extensions</h2>
+<ul>
+<li>This method works on <strong>any circuit</strong> that can be reduced by series/parallel rules.</li>
+<li>Graph algorithms enable <strong>automation</strong> and <strong>scalability</strong>.</li>
+<li>Can be extended to:</li>
+<li>Support voltage/current sources.</li>
+<li>Handle Wheatstone bridges via Y-Δ transformations.</li>
+<li>GUI for interactive circuit editing.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
