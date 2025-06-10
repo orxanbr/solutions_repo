@@ -172,6 +172,128 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="estimating-pi-using-monte-carlo-methods">🎯 Estimating <span class="arithmatex">\(\pi\)</span> using Monte Carlo Methods</h1>
+<h2 id="motivation">📘 Motivation</h2>
+<p>Monte Carlo simulations are computational techniques using randomness to solve problems. One famous use: estimating <span class="arithmatex">\(\pi\)</span> via geometric probability. By generating random points or dropping virtual needles and checking how often they satisfy geometric conditions, we can approximate <span class="arithmatex">\(\pi\)</span> in a simple, visual way.</p>
+<hr/>
+<h1 id="part-1-estimating-pi-using-a-circle">🧮 PART 1: Estimating <span class="arithmatex">\(\pi\)</span> Using a Circle</h1>
+<h2 id="1-theoretical-foundation">1️⃣ Theoretical Foundation</h2>
+<p>Imagine a <strong>unit circle</strong> (radius <span class="arithmatex">\(r = 1\)</span>) inside a square of side length 2:</p>
+<ul>
+<li>Area of square: <span class="arithmatex">\(4\)</span></li>
+<li>Area of circle: <span class="arithmatex">\(\pi\)</span></li>
+</ul>
+<p>So, if we randomly throw points in the square, the ratio inside the circle approximates:</p>
+<div class="arithmatex">\[
+\frac{\text{Points inside circle}}{\text{Total points}} \approx \frac{\pi}{4}
+\quad \Rightarrow \quad \pi \approx 4 \cdot \frac{M}{N}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\(N\)</span> = total number of random points
+- <span class="arithmatex">\(M\)</span> = number that land inside the circle</p>
+<hr/>
+<h2 id="2-simulation-code-python">2️⃣ Simulation Code (Python)</h2>
+<pre><code class="language-python">def estimate_pi_circle(num_points=10000):
+    x = np.random.uniform(-1, 1, num_points)
+    y = np.random.uniform(-1, 1, num_points)
+    inside = x**2 + y**2 &lt;= 1
+    pi_est = 4 * np.sum(inside) / num_points
+    return pi_est
+</code></pre>
+<hr/>
+<h2 id="3-visualization">3️⃣ Visualization</h2>
+<ul>
+<li><strong>Green dots</strong>: Points inside the circle  </li>
+<li><strong>Red dots</strong>: Points outside  </li>
+<li>The ratio gives an estimate of <span class="arithmatex">\(\pi\)</span></li>
+</ul>
+<p>🖼️ <em>(Plot shows circle boundary and distribution of points)</em></p>
+<hr/>
+<h2 id="4-analysis">4️⃣ Analysis</h2>
+<ul>
+<li>Accuracy improves as <span class="arithmatex">\(N\)</span> increases.</li>
+<li>Converges relatively fast with low variance.</li>
+</ul>
+<hr/>
+<h1 id="part-2-estimating-pi-using-buffons-needle">🪡 PART 2: Estimating <span class="arithmatex">\(\pi\)</span> Using Buffon's Needle</h1>
+<h2 id="1-theoretical-foundation_1">1️⃣ Theoretical Foundation</h2>
+<p>Drop a needle of length <span class="arithmatex">\(L\)</span> on a surface with <strong>parallel lines</strong> spaced <span class="arithmatex">\(D\)</span> apart (<span class="arithmatex">\(L \leq D\)</span>).<br/>
+Let:
+- <span class="arithmatex">\(T\)</span> = total number of throws
+- <span class="arithmatex">\(C\)</span> = number of crossings (needle crosses a line)</p>
+<p>Then:</p>
+<div class="arithmatex">\[
+\pi \approx \frac{2L \cdot T}{D \cdot C}
+\]</div>
+<hr/>
+<h2 id="2-simulation-code-python_1">2️⃣ Simulation Code (Python)</h2>
+<pre><code class="language-python">def buffon_needle(num_throws=10000, L=1.0, D=2.0):
+    theta = np.random.uniform(0, np.pi/2, num_throws)
+    d = np.random.uniform(0, D/2, num_throws)
+    crosses = d &lt;= (L / 2) * np.sin(theta)
+    C = np.sum(crosses)
+    return (2 * L * num_throws) / (D * C) if C &gt; 0 else np.nan
+</code></pre>
+<hr/>
+<h2 id="3-visualization_1">3️⃣ Visualization</h2>
+<ul>
+<li><strong>Green needles</strong>: Cross lines  </li>
+<li><strong>Red needles</strong>: Do not cross  </li>
+<li><strong>Dashed lines</strong>: Evenly spaced lines</li>
+</ul>
+<p>🖼️ <em>(Plot shows needles and line grid)</em></p>
+<hr/>
+<h2 id="4-analysis_1">4️⃣ Analysis</h2>
+<ul>
+<li>Estimates improve slowly.</li>
+<li>Convergence is noisy due to fewer crossings.</li>
+<li>Requires more samples for accurate results.</li>
+</ul>
+<hr/>
+<h1 id="convergence-comparison">📊 Convergence Comparison</h1>
+<p>We compare both methods by plotting <span class="arithmatex">\(\hat{\pi}\)</span> estimates vs number of iterations.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Speed</th>
+<th>Variance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circle Method</td>
+<td>Fast</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Buffon’s Needle</td>
+<td>Slower</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>🖼️ <em>(Graph shows Circle Method stabilizing faster and closer to <span class="arithmatex">\(\pi\)</span>)</em></p>
+<hr/>
+<p><img alt="alt text" src="../image-13.png"/></p>
+<p><img alt="alt text" src="../image-14.png"/></p>
+<p><img alt="alt text" src="../image-15.png"/></p>
+<h1 id="conclusion">✅ Conclusion</h1>
+<ul>
+<li>The Circle Method is simpler, faster, and more stable for estimating <span class="arithmatex">\(\pi\)</span>.</li>
+<li>Buffon's Needle is elegant and geometric, but slower to converge.</li>
+<li>Both demonstrate how <strong>randomness</strong> and <strong>probability</strong> can be used to estimate constants.</li>
+</ul>
+<hr/>
+<h1 id="deliverables">📌 Deliverables</h1>
+<ul>
+<li>✅ Circle-based simulation with explanation and plots  </li>
+<li>✅ Buffon’s Needle simulation with derivation and visual  </li>
+<li>✅ Convergence analysis plot  </li>
+<li>✅ Mathematical and practical insights</li>
+</ul>
+<hr/>
+<p>Let me know if you’d like a <code>.ipynb</code> notebook version, export to PDF, or add animations!</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
