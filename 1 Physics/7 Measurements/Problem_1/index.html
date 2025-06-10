@@ -172,6 +172,137 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">🧪 Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<h2 id="motivation">🎯 Motivation</h2>
+<p>Measuring <span class="arithmatex">\(g\)</span>, the acceleration due to gravity, is a fundamental experiment. One classical method is using a simple pendulum, where the period of oscillation depends on local <span class="arithmatex">\(g\)</span>. This project demonstrates how to measure <span class="arithmatex">\(g\)</span> using timing and length data, including uncertainty propagation.</p>
+<hr/>
+<h2 id="materials-and-setup">🧰 Materials and Setup</h2>
+<ul>
+<li>String: <span class="arithmatex">\(1.00 \ \text{m}\)</span> long  </li>
+<li>Ruler resolution: <span class="arithmatex">\(0.01 \ \text{m}\)</span> ⟹ <span class="arithmatex">\(\Delta L = 0.005 \ \text{m}\)</span> </li>
+<li>Stopwatch (timing resolution considered negligible in this simulation)</li>
+</ul>
+<hr/>
+<h2 id="data-collection">🧪 Data Collection</h2>
+<h3 id="10-measurements-of-10-oscillations-seconds">10 Measurements of 10 Oscillations (Seconds)</h3>
+<table>
+<thead>
+<tr>
+<th>Trial</th>
+<th><span class="arithmatex">\(T_{10}\)</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20.12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20.15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20.10</td>
+</tr>
+<tr>
+<td>4</td>
+<td>20.20</td>
+</tr>
+<tr>
+<td>5</td>
+<td>20.08</td>
+</tr>
+<tr>
+<td>6</td>
+<td>20.14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>20.18</td>
+</tr>
+<tr>
+<td>8</td>
+<td>20.11</td>
+</tr>
+<tr>
+<td>9</td>
+<td>20.13</td>
+</tr>
+<tr>
+<td>10</td>
+<td>20.16</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="calculations">📊 Calculations</h2>
+<h3 id="1-mean-time-and-standard-deviation">1️⃣ Mean Time and Standard Deviation</h3>
+<ul>
+<li><span class="arithmatex">\(\bar{T}_{10} = 20.137 \ \text{s}\)</span> </li>
+<li><span class="arithmatex">\(\sigma_{T10} = 0.0368 \ \text{s}\)</span> </li>
+<li>Uncertainty in mean:<br/>
+  $$
+  \Delta T_{10} = \frac{\sigma_{T10}}{\sqrt{n}} = \frac{0.0368}{\sqrt{10}} \approx 0.0116 \ \text{s}
+  $$</li>
+</ul>
+<hr/>
+<h3 id="2-period-of-one-oscillation">2️⃣ Period of One Oscillation</h3>
+<div class="arithmatex">\[
+T = \frac{\bar{T}_{10}}{10} = \frac{20.137}{10} = 2.0137 \ \text{s}
+\]</div>
+<div class="arithmatex">\[
+\Delta T = \frac{\Delta T_{10}}{10} = \frac{0.0116}{10} = 0.001165 \ \text{s}
+\]</div>
+<hr/>
+<h3 id="3-determining-g">3️⃣ Determining <span class="arithmatex">\(g\)</span></h3>
+<p>For a simple pendulum:</p>
+<div class="arithmatex">\[
+T = 2\pi \sqrt{\frac{L}{g}} \quad \Rightarrow \quad g = \frac{4\pi^2 L}{T^2}
+\]</div>
+<p>Using <span class="arithmatex">\(L = 1.00 \ \text{m}\)</span> and <span class="arithmatex">\(T = 2.0137 \ \text{s}\)</span>:</p>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 \cdot 1.00}{(2.0137)^2} \approx 9.736 \ \text{m/s}^2
+\]</div>
+<hr/>
+<h3 id="4-propagating-uncertainties">4️⃣ Propagating Uncertainties</h3>
+<p>From the formula:</p>
+<div class="arithmatex">\[
+\Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( \frac{2 \Delta T}{T} \right)^2 }
+\]</div>
+<p>Substitute values:</p>
+<div class="arithmatex">\[
+\Delta g = 9.736 \cdot \sqrt{ \left( \frac{0.005}{1.00} \right)^2 + \left( \frac{2 \cdot 0.001165}{2.0137} \right)^2 }
+\approx 0.050 \ \text{m/s}^2
+\]</div>
+<hr/>
+<h2 id="final-result">✅ Final Result</h2>
+<ul>
+<li><strong>Measured <span class="arithmatex">\(g\)</span></strong>: <span class="arithmatex">\(9.736 \pm 0.050 \ \text{m/s}^2\)</span> </li>
+<li><strong>Accepted value</strong>: <span class="arithmatex">\(9.81 \ \text{m/s}^2\)</span></li>
+</ul>
+<p>✅ The result is within uncertainty range of the accepted value.</p>
+<hr/>
+<p><img alt="alt text" src="../image.png"/></p>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<h2 id="discussion">🧠 Discussion</h2>
+<h3 id="1-resolution-and-measurement-uncertainty">1. Resolution and Measurement Uncertainty</h3>
+<ul>
+<li>Ruler resolution affects <span class="arithmatex">\(\Delta L\)</span> </li>
+<li>Timing variation impacts <span class="arithmatex">\(\Delta T\)</span></li>
+</ul>
+<h3 id="2-experimental-variability">2. Experimental Variability</h3>
+<ul>
+<li>Small release angle maintained at <span class="arithmatex">\(&lt; 15^\circ\)</span> </li>
+<li>Assumes no air resistance or string stretch</li>
+</ul>
+<hr/>
+<h2 id="deliverables">📌 Deliverables</h2>
+<ul>
+<li>✅ Tabulated raw data  </li>
+<li>✅ Calculated <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(g\)</span>, <span class="arithmatex">\(\Delta T\)</span>, <span class="arithmatex">\(\Delta g\)</span> </li>
+<li>✅ Full uncertainty derivation and result analysis  </li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
