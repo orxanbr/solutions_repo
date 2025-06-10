@@ -144,4 +144,3 @@ $$
 
 ---
 
-Let me know if you'd like this converted to a `.ipynb` notebook or animated!

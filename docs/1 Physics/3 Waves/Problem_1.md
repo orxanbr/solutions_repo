@@ -147,4 +147,3 @@ simulate_interference_pattern(n_sources=5, title="Regular Pentagon")
 
 ---
 
-Let me know if you want this as `.ipynb`, animated, extended to 3D, or exported to PDF.

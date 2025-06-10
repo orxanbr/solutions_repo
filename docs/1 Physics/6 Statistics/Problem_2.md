@@ -144,4 +144,3 @@ We compare both methods by plotting $\hat{\pi}$ estimates vs number of iteration
 
 ---
 
-Let me know if you’d like a `.ipynb` notebook version, export to PDF, or add animations!
